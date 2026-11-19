@@ -1,0 +1,62 @@
+Library building models used by src/world/miami/bldmodels.js (converted from Models/Buildings by tools/v2/buildings/convert_all.sh:
+meshes joined per material, decimated where heavy, textures <= 1024 px JPEG, origin at footprint center / ground).
+Licenses as listed in Models/catalog.csv (none of these rows is marked "personal use only").
+podium_tower.glb        <- Building 9  - Tall Podium Skyscraper
+slim_residential.glb    <- Building 10 - Slim Residential High-Rise
+red_band_tower.glb      <- Building 14 - Tall Dark Office Tower With Red Top Band
+curved_glass_tower.glb  <- Building 13 - Slim Curved Glass Skyscraper (interior, furniture, blinds removed; 116k -> 40k tris)
+brick_cottage.glb       <- Building 1  - Brick Suburban Cottage
+blue_house.glb          <- Building 16 - Blue Two-Story Suburban House With Garage
+brick_duplex.glb        <- Building 3  - Two-Story Brick Duplex
+graffiti_shop.glb       <- Building 4  - Flat-Roof Graffiti Shop (asphalt lot removed)
+stilt_shack.glb         <- Building 5  - Rundown Stilt House With Rusty Roof (132k -> 16k tris)
+casino_tower.glb        <- Building 15 - Curved Spiral Casino Tower On Plaza (Golden Palm Casino, fixed site in Miami Beach)
+
+Batch 2 (overnight Nov 17, tools/v2/buildings/convert_v2.sh + models.json: meters, origin at footprint center on the ground, front toward +Z,
+WebP textures, <name>_lod1.glb far LOD where listed, <name>_col.glb collision mesh (positions only) for every placed model).
+Licenses: Models/catalog.csv / Models/INTAKE_2026-11-16.md (all "user-verified free for any use"; none of the "personal use only" rows).
+hotel_tower.glb    <- Models/Hotels/Hotel 1 - Tall Beige Tower With Curved Balconies And Pool Deck
+grid_tower.glb     <- Models/Office Buildings/Office Building 1 - Tall Black Grid Glass Tower With Lobby Trimsheet
+deco_tower.glb     <- Models/Office Buildings/Office Building 11 - Stepped Art Deco Stripe Tower
+old_brick_towers.glb <- Models/Office Buildings/Office Building 10 - Old Brick And Orange Panel Apartment-Office Towers
+black_glass_14.glb <- Models/Office Buildings/Office Building 7 - Black Glass Fourteen-Story With Light Podium And Plaza Slab
+stepped_midrise.glb <- Models/Office Buildings/Office Building 6 - Tall Stepped Dark Mid-Rise With Curved Corner
+curved_res_tower.glb <- Models/Buildings/Building 17 - Tall Curved Glass Residential Tower With Podium
+concrete_tower.glb <- Models/Buildings/Building 18 - Weathered Concrete High-Rise On Round Base
+ribbed_tower.glb   <- Models/Buildings/Building 22 - Slim Ribbed Balcony Office Tower
+gold_crown_tower.glb <- Models/Buildings/Building 24 - Tall Curved Glass Residential Tower With Balconies
+blue_glass_tower.glb <- Models/Buildings/Building 25 - Curved Blue-Glass High-Rise On Plaza Plinth
+grid_block.glb     <- Models/Office Buildings/Office Building 4 - Seven-Story Dark Grid Block With Roof Plant Boxes
+angular_block.glb  <- Models/Office Buildings/Office Building 5 - Angular Dark Office Block With Shop Strip Base
+strip_office.glb   <- Models/Office Buildings/Office Building 9 - Cheap Four-Story Glass Strip Office
+green_apartment.glb <- Models/Buildings/Building 23 - Green Stucco Five-Story Apartment With Orange Base
+fire_station.glb   <- Models/Buildings/Building 28 - Dark Grimy Brick Two-Story Fire Station With Roof Units
+garage_row.glb     <- Models/Buildings/Building 2 - Long Mossy Warehouse Row
+gun_shop.glb       <- Models/Storefronts/Storefront 6 - Small Brick Gun Shop With Barred Windows And Roof Units
+stone_shop.glb     <- Models/Storefronts/Storefront 5 - Two-Story Stone-Brick Shop With Terrace And Rooftop Skylight
+brick_shopfront.glb <- Models/Storefronts/Storefront 2 - Brick And Black Panel Shop Front With Awning And Glass Doors
+bookshop.glb       <- Models/Storefronts/Storefront 1 - Blue-Gray Two-Story Bookshop Front With Hanging Signs
+shutter.glb        <- Models/Storefronts/Shutter 1 - Rolling Steel Shutters One Plain One With Graffiti
+motel.glb          <- Models/Motels/Motel 2 - Two-Building Roadside Motel With Parking Lot
+strip_diner.glb    <- Models/Diners/Diner 3 - Long Low Strip Diner On Cracked Asphalt Lot
+gas_station.glb    <- Models/Gas Stations/Gas Station 1 - Canopy Station With Convenience Store And Props
+factory_plant.glb  <- Models/Factories/Factory 1 - Abandoned Brick Power Plant With Twin Chimneys
+factory_sewing.glb <- Models/Factories/Factory 2 - Brick Sewing Factory With Skylight Roof And Billboard
+blue_gable_house.glb <- Models/Buildings/Building 26 - Blue Two-Story Gabled House With Porch
+ranch_house.glb    <- Models/Buildings/Building 27 - White Siding Ranch House With Shingle Roof And Porch
+control_tower.glb  <- Models/Airport/Control Tower 1 - Tall Modern Control Tower
+control_tower_sm.glb <- Models/Airport/Control Tower 2 - Concrete Shaft Tower With Glass Cab
+jet_bridge.glb     <- Models/Airport/Jet Bridge 1 - Passenger Boarding Bridge
+hangar_arch.glb    <- Models/Hangars/Hangar 1 - Arched-Roof Airfield Hangar With Brick End Towers
+hangar_quonset.glb <- Models/Hangars/Hangar 2 - Rusty Barrel-Vault Hangar With Faded Number
+hangar_long.glb    <- Models/Hangars/Hangar 4 - Long Gray Multi-Bay Hangar Block
+roof_vents.glb     <- Models/Ventilators/Ventilator 2 - Three Square Roof Vent Covers
+roof_tank.glb      <- Models/Tanks/Tank 1 - Horizontal Gas Storage Tank
+water_tower.glb    <- Models/Water Towers/Water Tower 2 - Tall Slim Steel Water Tower
+fire_escape.glb    <- Models/Stairs/Stairs 2 - Steel Fire-Escape Staircase
+util_cabinet.glb   <- Models/Transformers/Transformer 2 - Old Rusty Utility Cabinet
+Collision-only (_col.glb) added for the batch-1 models above; casino_tower_lod1.glb (37k tris) added.
+booth_ruin.glb     <- Models/Booths/Booth 1 - Overgrown Concrete Booth Ruin
+tarp_shack.glb     <- Models/Buildings/Building 6 - Ramshackle Tarp Shack
+airliner.glb       <- Models/Planes/Plane 7 - Narrow-Body Twin-Jet Airliner
+Far LODs (_lod1.glb) of multi-material models are baked into ONE atlas material (Cycles diffuse bake, glass baked dark); airliner livery colors neutralized in the shader.

@@ -1,0 +1,21 @@
+{
+ "key": "van2",
+ "static": true,
+ "dims": {
+  "L": 5.0,
+  "W": 2.151,
+  "H": 2.019
+ },
+ "tris": {
+  "lod0": 2818,
+  "lod1": 2818,
+  "lod2": 900
+ },
+ "bytes": 78680,
+ "cfg": {
+  "L": 5.0,
+  "textured": true,
+  "static": true,
+  "fwd": "-x"
+ }
+}

@@ -1,0 +1,29 @@
+Ground textures (stage 1 ground pass). License: the user's ground scans / textures in Models/Textures (Models/INTAKE_2026-11-16.md,
+user-verified free for any use, source: Sketchfab download zips, no author names known) and two Poly Haven sets already in the repo (CC0).
+Built by tools/v2/ground/prep_ground.py (terrain layers) and tools/v2/ground/prep_grass.py (grass card atlas).
+
+Terrain layers: <key>_col.jpg 1024 albedo (sRGB, de-lit: large-scale luminance splotches divided out, mean luminance and contrast normalized),
+<key>_h.jpg 1024 height (height-based blending), <key>_nrm.jpg 512 OpenGL normal, <key>_arm.jpg 512 (R AO, G roughness, B 0).
+Normal conventions were checked against the height gradient (prep_ground.py prints the correlation); DirectX maps were converted.
+
+grass:     Textures/Grass Cards 3 - Dark Dry Grass Plates With Seamless Top/textures/Top Seamless.png (normal + height derived from luminance)
+           -> lawns, verges, meadows, groves, pine / sawgrass / marsh grass (recolored in the shader from straw to lush green per zone)
+lawn:      Textures/Ground 1 - Mottled Green Lawn With Dirt Patches (Color, Normal (GL, verified), Roughness, AO)
+           -> large-scale (17-30 m) macro variation over lawns / meadows / scrub; its darker patches push in bare soil
+sand:      Textures/Sand 2 - Fine Peach Beach Sand With Footprints (Color, Normal DX -> GL, Height, Roughness)
+           -> beaches (dry / damp / wet bands by distance to water), sand under Keys yards, damp sand flats
+sandgrass: Textures/Sand 1 - Dry Grassy Sand Scan Patch/Sand Scan Color.jpg (inner 80 %, made tileable: offset + height-aware seam blend)
+           -> Keys yards and inland sand lots (matted dry grass on sand), also as macro variation there and on dirt lots
+gravel:    Textures/Dirt 1 - Pale Gray Gravelly Dirt (Color, Normal DX -> GL, Height, Roughness)
+           -> shoulders / gravel / crushed shell (tinted pale) / city lot ground, gravel patches in dirt lots
+soil:      Textures/Grass Cards 4 - Green Grass Chunks On Ground Patch/textures/Ground Close 04 (Color, Normal GL, High, Occlusion)
+           -> bare soil patches in lawns and verges, dirt lots, plowed farmland, forest floor
+mud:       Textures/Ground 2 - Dark Mud With Dry Grass Terrain Patch/textures/Mud Tile (Color, Normal GL, Roughness in green)
+           -> swamp, marsh, sawgrass glades (with standing water)
+leaves:    Poly Haven forest_leaves_02 (CC0, public/assets/city/pbr) -> hammock forest floor
+stony:     Poly Haven forest_ground_04 (CC0, public/assets/city/pbr) -> pine rockland, rock
+
+grass_cards.png (2048 RGBA atlas, color bled under transparent texels):
+  Textures/Grass Cards 3 .../Plate 1-3.png (dense dry grass strips)
+  Textures/Grass Cards 4 .../Rostlinka 07c Color + Alpha (wild grass clumps), Rostlinka12 2k Color + Alpha (weed sprigs)
+  Textures/Grass Cards 1 .../Grass{,1,2,3} Mat Color + Alpha (single blades), Grass Cards 2 .../Grass Blades Color.png (RGBA blade, its alpha)

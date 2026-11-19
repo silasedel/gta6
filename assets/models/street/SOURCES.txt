@@ -1,0 +1,44 @@
+Street furniture models (stage 1 jobs 4-5). Every file here is converted from the user's model library (Models/, see
+Models/catalog.csv for name / license notes; none of these rows is marked "personal use only") by
+tools/v2/street-models/build.sh (convert.py), signals.py and signs.py: meters, base at the origin, front toward three.js +Z,
+decimated, textures resized (max 512-1024 px) and re-encoded as JPEG inside the GLB.
+
+file                 source (Models/...)                                                       edits
+signal_kit.glb       Traffic Lights/Traffic Light 1 - Vintage Signal Poles (pole SketchUp.004) kitbashed into pole / truss arm / 3-section head
+                                                                                                (+ red, amber, green lens parts) / pedestrian head (+ WALK,
+                                                                                                DONT WALK icons); flat CAD colors baked to vertex colors;
+                                                                                                head 11.9k -> 3.2k tris, ped 9.5k -> 1.5k tris
+sign_set1.glb        Signs/Sign Set 1 - Prohibition Signs                                       STOP, DO NOT ENTER, NO PARKING, NO STANDING, no-bike, no-truck,
+                                                                                                no-U-turn plates, each at its real MUTCD size
+sign_set5.glb        Signs/Sign Set 5 - Regulation Signs                                        ONE WAY (L/R), PASS WITH CARE, RIGHT TURN ONLY plates + the
+                                                                                                perforated U-channel post (SPEED LIMIT plates reuse the NO
+                                                                                                PARKING plate with a repainted face, original art, in code)
+lamp_single.glb      Roads/Road 7 - Lamp-Lined Two-Lane Road (curved davit street lamp)         one arm of the twin lamp, scene paving removed, x1.35 (8.6 m)
+lamp_twin.glb        Roads/Road 7 - Lamp-Lined Two-Lane Road                                    twin-arm median lamp, x1.35
+lamp_arm.glb         Roads/Road 7 - Lamp-Lined Two-Lane Road                                    the davit arm + luminaire only (bolted onto utility poles)
+upole_gear.glb       Roads/Road 7 - Lamp-Lined Two-Lane Road (utility pole)                     pole, cross-arm, insulators, transformer can; 137k -> 5k tris
+lantern_post.glb     Street Lamps/Street Lamp 1 - Wooden Post With Hanging Lantern             4.6 m
+hydrant_a.glb        Fire Hydrants/Fire Hydrant 1 - Worn Yellow Hydrant With Blue Top          0.78 m, 14k -> 1.8k tris
+hydrant_b.glb        Fire Hydrants/Fire Hydrant 3 - Dull Olive-Yellow Hydrant                  0.8 m, 417k -> 2.5k tris
+bench_wood.glb       Benches/Bench 3 - Classic Wooden Park Bench
+bench_iron.glb       Benches/Bench 2 - Ornate Cast-Metal Slat Bench                            library textures re-linked (were unlinked in the .blend)
+bin_metal.glb        Bins/Trash Can 4 - Slatted Metal Street Bin                               textures re-linked
+bin_wood.glb         Bins/Trash Can 3 - Round Wooden Slat Bin
+bin_wheel.glb        Bins/Trash Can 2 - Graffiti Wheeled Bin
+bin_set.glb          Bins/Trash Can 1 - Wheeled Curbside Bin Set
+dumpster.glb         Bins/Dumpster 1 - Graffiti Front-Load Dumpsters
+shelter_glass.glb    Bus Shelters/Bus Shelter 3 - Modern Curved-Roof Bus Shelter              glass made transparent in game
+shelter_long.glb     Bus Shelters/Bus Shelter 2 - Modern Long Glass Bus Shelter
+shelter_black.glb    Bus Shelters/Bus Shelter 4 - Modern Black-Roof Bus Stop
+shelter_old.glb      Bus Shelters/Bus Shelter 1 - Rundown Graffiti Bus Shelter
+meter.glb            Parking Meters/Parking Meter 2 - Plain Grey Street Meter                  textures re-linked
+mailbox_post.glb     Mailboxes/Mailbox 2 - Rusty Wooden Post Mailbox
+mailbox_twin.glb     Mailboxes/Mailbox 1 - Plain White Twin Mailboxes                          textures re-linked
+mailbox_drop.glb     Mailboxes/Mailbox 3 - Grey Street Drop Mailbox                            textures re-linked
+transformer.glb      Transformers/Transformer 1 - Green Pad-Mount Transformer
+cabinet.glb          Transformers/Transformer 2 - Old Rusty Utility Cabinet                    used as the signal controller cabinet
+flexpost.glb         Bollards/Bollard 3 - Orange Flexible Post Bollard
+umbrella_beach1.glb  Beach Stuff/Umbrella 1 - Colorful Beach Umbrella                         r4-library: sunbathers' umbrellas
+umbrella_beach2.glb  Beach Stuff/Umbrella 2 - Classic Beach Umbrella                           r4-library: sunbathers' umbrellas
+picnic_table.glb     Furniture/Picnic Table 1 - Dark Weathered Wooden Picnic Table             r4-library: 10k -> 3k tris, 4K -> 1K
+cap.glb              Hats/Cap 1 - Two Plain Baseball Caps                                      r4-library: one cap, geometry only (colored per NPC)

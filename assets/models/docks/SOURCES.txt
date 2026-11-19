@@ -1,0 +1,13 @@
+Docks for Key Largo (track: keys). Converted from the user's model library (Models/, rows in Models/catalog.csv; none is
+marked "personal use only") by tools/v2/keys/build_models.sh (tools/v2/keys/blender/convert_dock.py): meters, Y up, origin at
+the walking surface (deck) center, wood never metallic, textures <= 1-2K JPEG inside the GLB, loose texture maps wired in
+where the .blend had none (Dock 5).
+
+file                  source (Models/Docks/...)                                                   notes
+pier_kit.glb          Dock 6 - Modular Weathered Wooden Pier Kit With Posts And Bollards           Poly Haven pack; pieces kept separate
+                                                                                                   (sections 01-05, poles, planks), 6k tris each
+mossy_pier.glb        Dock 2 - Weathered Mossy Pier                                               x60 to meters
+clean_pier.glb        Dock 3 - Clean Wooden Pier                                                  x45 to meters, rope coils (Circle*) left out
+loose_platforms.glb   Dock 4 - Loose Wooden Dock Platforms                                        pieces kept separate
+boardwalk.glb         Dock 5 - Wooden Boardwalk Pier Segments                                     pieces kept separate, textures wired
+boathouse.glb         Dock 1 - Rustic Boathouse Dock                                              decimated 64k -> 24k tris

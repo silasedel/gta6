@@ -1,0 +1,5 @@
+Utility covers (round 2, r2-roads), converted by tools/v2/roads/covers.sh from the user's library (Models/catalog.csv):
+mh_sewer.glb, valve.glb  Sewer Grates/Manhole 4 - Embossed Water-Utility Round Cover (Poly Haven, free for any use); 0.80 m / 0.30 m
+mh_storm.glb             Sewer Grates/Manhole 2 - Rusty Round Cover In Patched Asphalt (Sketchfab, user-verified free for any use)
+inlet.glb, mh_pack.glb   Prop Packs/Street Props Pack 1 'Drain' / 'Manhole' (Sketchfab city-props-collection-volume-1, user-verified free for any use)
+Placed by src/world/surfaces/covers.js.

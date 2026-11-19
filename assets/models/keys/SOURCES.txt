@@ -1,0 +1,13 @@
+Key Largo props (track: keys). Converted from the user's model library (Models/, see Models/catalog.csv; none of these rows
+is "personal use only") by tools/v2/keys/build_models.sh: meters, Y up, base at the origin, textures <= 1K JPEG.
+
+file               source (Models/...)                                                   notes
+bins.glb           Bins/Trash Can 1 - Wheeled Curbside Bin Set                           four carts as separate centered pieces
+rolloff.glb        Bins/Dumpster 3 - Large Open Roll-Off Container                       loose maps wired (Color/Roughness/Normal), tinted red in game
+rocks.glb          Rocks/Rock 2 - Seven Mossy Brown Rocks (Poly Haven)                   six rocks as pieces, 900 tris each, lightened to Keys limestone
+fence_rustic.glb   Fences/Fence 4 - Dark Rustic Wooden Fence                             scaled in game
+fence_picket.glb   Fences/Fence 5 - Low Wooden Picket Fence
+rowboat.glb        Boats/Boat 14 - Worn White Rowboat With Red Interior                  x0.01 (cm source)
+skiff.glb          Boats/Boat 3 - Small Fishing Boat
+lifebuoy.glb       Lifebuoys/Lifebuoy 3 - Weathered Red Ring With Gray Bands And Rope    Poly Haven pack
+crate.glb          Crates/Crate 1 - Plain Wooden Crate                                   x0.3 (0.6 m cube), loose maps wired

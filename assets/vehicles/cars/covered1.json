@@ -1,0 +1,20 @@
+{
+ "key": "covered1",
+ "static": true,
+ "dims": {
+  "L": 4.4,
+  "W": 1.797,
+  "H": 1.417
+ },
+ "tris": {
+  "lod0": 12590,
+  "lod1": 3994,
+  "lod2": 880
+ },
+ "bytes": 225780,
+ "cfg": {
+  "L": 4.4,
+  "static": true,
+  "fwd": "-y"
+ }
+}

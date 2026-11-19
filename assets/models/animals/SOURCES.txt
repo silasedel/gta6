@@ -1,0 +1,3 @@
+dog_doberman.glb       Animals/Dog 1 - Rigged Doberman   rig kept (31 bones), rest pose, withers 0.62 m, 1K coat (tools/v2/animals/build_dogs.py)
+dog_doberman_red.jpg   coat recolor of the same texture (tools/v2/animals/dog_variants.py)
+dog_doberman_blue.jpg  coat recolor of the same texture

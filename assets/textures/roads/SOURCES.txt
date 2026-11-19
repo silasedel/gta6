@@ -1,0 +1,23 @@
+Road surface textures (stage 1 job 4). All from the user's road model library Models/Roads (license: see Models/catalog.csv rows Road 1..11),
+repacked by tools/v2/roads/build_road_textures.py: <name>_col.jpg albedo (sRGB), <name>_nrm.jpg OpenGL normal, <name>_arm.jpg (R AO=1, G roughness, B metal=0).
+
+asphalt: Road 6 - Road Through Tunnel Hill/textures/Asphalt Color.jpeg | normal Road 6 - Road Through Tunnel Hill/textures/Asphalt Normal.jpeg | roughness Road 6 - Road Through Tunnel Hill/textures/Asphalt Roughness.jpeg  (streets, junctions, caps; ~3.2 m per tile)
+sidewalk: Road 4 - Road Bridge Over Dirt/textures/Sidewalk Color.jpeg | normal Road 4 - Road Bridge Over Dirt/textures/Sidewalk Normal.jpeg | roughness Road 4 - Road Bridge Over Dirt/textures/Sidewalk Roughness.jpeg  (poured concrete sidewalk panels with tooled joints; 3 m per tile = 1.5 m panels; also curb faces and ramps)
+pavers: Road 2 - Four-Way Crossroads Tile/textures/Block05 Color.jpg | normal Road 2 - Four-Way Crossroads Tile/textures/Block 5 Normal.jpg | roughness Road 2 - Four-Way Crossroads Tile/textures/Block 5 Roughness.jpg  (downtown / business sidewalks and block plazas)
+dirt: Road 11 - Dirt Road Forest Island Scene/textures/Dirt Road Color.png | normal Road 11 - Dirt Road Forest Island Scene/textures/Dirt Road Normal.png | roughness Road 11 - Dirt Road Forest Island Scene/textures/Dirt Road Roughness.png  (unpaved tracks (surface 'dirt'))
+edge: Road 11 - Dirt Road Forest Island Scene/textures/Dusty Road Edge Gravel.png | normal + roughness from Road 6 Gravel  (shoulders: asphalt edge crumbling into dust / sand, dissolves into the verge)
+lines: Road 1 - Long Asphalt Road Strip/textures/RoadLines Color/Normal/Roughness.jpg  (atlas columns: white line px 173-236, yellow line px 1922-2004, white line px 3861-3924, plain asphalt px 900-1100; markings, crosswalks, stop bars, sealed patches)
+
+decals (atlas 4 x 4 cells, tools/v2/roads/build_decal_atlas.py):
+  cell 0 crack: Road Details/Road Crack 1 (top-down bake of the 100k scan)
+  cell 1 crack network: Road Details/Pothole 1 (crazed corner of the 1M scan)
+  cell 2 pothole: Road Details/Pothole 2 (Pot Hole Color/Normal)
+  cell 3 patched pothole: Road Details/Pothole 1 (top-down bake of the 1M scan)
+  cell 4 manhole: Sewer Grates/Manhole 1 (top-down bake of the 1M scan; cover ~0.6 m)
+  cell 5 water-meter cover: Sewer Grates/Manhole 2 (top-down bake)
+  cell 6 storm-drain grate: Sewer Grates/Sewer Grate 1 (FBX, top-down bake with Sewage Old Color)
+  cells 7-8 oil stains: drawn (soft blotches, glossy)
+  cells 9-13 turn arrows (straight, left, right, straight+left, straight+right): drawn, worn with the Road 1 RoadLines scan
+  cell 14 sealed patch: Road Details/Pothole 1 patch asphalt
+  cell 15 tar-sealed crack: Road Crack 1 crack mask, filled with tar
+concrete: Models/Textures/Concrete 3 - Gray Poured Concrete PBR (Color, Normal DX -> GL, AO, Roughness)  (parking lots, aprons; ground pass)

@@ -1,0 +1,1 @@
+import{cH as r}from"./index-Cm_mx7eP.js";const e=200;function i(o){var n,s;(s=(n=o.updaters)==null?void 0:n.push)==null||s.call(n,()=>{const t=o.scene;t&&r(t.environment)})}export{i as initV2,e as order};

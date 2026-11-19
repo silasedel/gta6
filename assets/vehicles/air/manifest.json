@@ -1,0 +1,87 @@
+{
+ "floatplane": {
+  "tris": 32679,
+  "size_xyz_gltf": [
+   10.87,
+   3.89,
+   8.22
+  ],
+  "nodes": {
+   "PROP0": [
+    0.0,
+    1.882,
+    3.283
+   ],
+   "AIL_L": [
+    3.815,
+    2.662,
+    0.771
+   ],
+   "AIL_R": [
+    -3.815,
+    2.662,
+    0.771
+   ],
+   "ELEV": [
+    0.0,
+    2.196,
+    -3.494
+   ],
+   "RUD": [
+    0.0,
+    2.991,
+    -3.55
+   ]
+  },
+  "bytes": 1425260,
+  "src": "Plane 3 - Classic Bush Floatplane/Plane 3.glb"
+ },
+ "prop": {
+  "tris": 51496,
+  "size_xyz_gltf": [
+   11.17,
+   2.96,
+   8.47
+  ],
+  "nodes": {
+   "PROP0": [
+    0.001,
+    0.898,
+    4.057
+   ],
+   "AIL_L": [
+    3.943,
+    1.912,
+    1.264
+   ],
+   "AIL_R": [
+    -3.943,
+    1.912,
+    1.264
+   ],
+   "ELEV": [
+    0.0,
+    1.435,
+    -2.618
+   ],
+   "RUD": [
+    0.0,
+    2.227,
+    -3.123
+   ]
+  },
+  "bytes": 2428284,
+  "src": "Plane 9 - High-Wing Single-Prop Light Plane/Plane 9.glb"
+ },
+ "bizjet": {
+  "tris": 54124,
+  "size_xyz_gltf": [
+   26.4,
+   6.26,
+   26.22
+  ],
+  "nodes": {},
+  "bytes": 2841704,
+  "src": "Plane 13 - Gold-Trim Business Jet/Plane 13.glb"
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "key": "bat2_tape",
+ "src": "Baseball Bat 2 - Light Wood Bat With Grip Tape",
+ "tris": 1160,
+ "tris_src": 1160,
+ "length": 0.84,
+ "bbox": {
+  "min": [
+   -0.0289,
+   -0.0289,
+   -0.09
+  ],
+  "max": [
+   0.0289,
+   0.0289,
+   0.75
+  ]
+ },
+ "points": {
+  "muzzle": [
+   0.0,
+   -0.0,
+   0.75
+  ]
+ },
+ "materials": {
+  "Bat Wood": {
+   "rough": 0.20001861453056335,
+   "metal": 0.0,
+   "col": [
+    0.759314775466919,
+    0.5789825916290283,
+    0.35769933462142944
+   ]
+  }
+ },
+ "parts": {},
+ "bytes": 48016
+}

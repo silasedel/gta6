@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOUTHLINE</title>
+  <!-- r2-web: the key art behind the loading screen and the title is the first thing painted -->
+  <link rel="preload" as="image" href="assets/ui/keyart_loading.webp" fetchpriority="high" />
+  <link rel="icon" href="./favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #000; }
+    canvas#game { display: block; width: 100vw; height: 100vh; }
+    #loading { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: radial-gradient(ellipse at 50% 70%, #ff7a4f 0%, #a8326a 40%, #1b0d33 85%); color: #fff; z-index: 1000;
+      font-family: 'Archivo Black', 'Arial Narrow', Arial, sans-serif; letter-spacing: .12em; transition: opacity .6s; }
+    #loading h1 { font-size: 88px; margin: 0; font-weight: 800; font-style: italic; text-shadow: 0 6px 30px rgba(0,0,0,.45); }
+    #loading p { opacity: .8; font-size: 18px; }
+    #loading .bar { width: 320px; height: 4px; background: rgba(255,255,255,.2); border-radius: 2px; overflow: hidden; }
+    #loading .bar i { display: block; height: 100%; width: 0; background: #fff; }
+    #loading .pct { margin-top: 12px; font-size: 22px; font-weight: 700; letter-spacing: .08em; font-variant-numeric: tabular-nums; opacity: .9; }
+  </style>
+  <script type="module" crossorigin src="./assets/index-Cm_mx7eP.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DAc7KoVD.css">
+  <meta name="sl-sw" content="sw.js" data-build="202611190042-43ad1f68">
+</head>
+<body>
+  <canvas id="game"></canvas>
+  <div id="loading"><h1>SOUTHLINE</h1><p id="loadmsg">LOADING</p><div class="bar"><i id="loadbar"></i></div><div class="pct" id="loadpct">0%</div></div>
+    <script>
+    // When hosted under a sub-path (e.g. GitHub Pages /port-solana/), rewrite root-absolute '/assets/...'
+    // URLs used by the game code to the site's base path. No-op when served from the domain root.
+    // r2-web: keep every resource entry (default buffer is 250) so the offline cache can copy what the first visit loaded
+    try { performance.setResourceTimingBufferSize(20000); } catch (e) {}
+    (function () {
+      var base = new URL('.', location.href).pathname;
+      if (base === '/') return;
+      var fix = function (u) { return typeof u === 'string' && u.indexOf('/assets/') === 0 ? base + u.slice(1) : u; };
+      var fixAbs = function (u) { try { var x = new URL(u, location.href); if (x.origin === location.origin && x.pathname.indexOf('/assets/') === 0) return base + x.pathname.slice(1) + x.search; } catch (e) {} return null; };
+      var of = window.fetch;
+      window.fetch = function (input, init) {
+        if (typeof input === 'string') input = fix(input);
+        else if (input instanceof URL) { var a = fixAbs(input.href); if (a) input = a; }
+        else if (input && input.url) { var r = fixAbs(input.url); if (r) input = new Request(r, input); }
+        return of.call(this, input, init);
+      };
+      var ox = XMLHttpRequest.prototype.open;
+      XMLHttpRequest.prototype.open = function (m, u) { var a = Array.prototype.slice.call(arguments); a[1] = fix(u instanceof URL ? u.href : u); return ox.apply(this, a); };
+      [HTMLImageElement, HTMLMediaElement, HTMLSourceElement].forEach(function (C) {
+        var d = Object.getOwnPropertyDescriptor(C.prototype, 'src');
+        if (d && d.set) Object.defineProperty(C.prototype, 'src', { configurable: true, get: d.get, set: function (v) { d.set.call(this, fix(v)); } });
+      });
+    })();
+  </script>
+</body>
+</html>
